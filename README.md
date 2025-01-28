@@ -4,10 +4,10 @@
 
 **A simple e-commerce web application**
 
-## Tech Stack
+## Languages
 
 - **Java**
-- **React**
+- **Node.js**
 - **TypeScript**
 - **HTML**
 - **SASS**
@@ -15,21 +15,23 @@
 ## Frameworks & Libraries
 
 - **Spring Boot**
-- **Node.js**
+- **React**
 
 ## Database
 
-- **MongoDB**
+- **Postgresql**
 
 ## Build Tools
 
 - **Gradle**
+- **npm**
 - **Docker**
 
 ## Development Tools
 
 - **IntelliJ IDEA**
-- **MongoDB Compass**
+- **pgAdmin4**
+- **Chrome**
 
 ## Prerequisites
 
@@ -37,7 +39,7 @@
 - Java 17 or above
 - Docker Desktop
 - Gradle
-- MongoDB
+- Postgresql
 - Intellij (or your favourite IDE)
 
 ## How to Run
