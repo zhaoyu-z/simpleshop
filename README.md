@@ -36,7 +36,6 @@
 
 ## Prerequisites
 
-- **Windows 10 or above**
 - **Java 17 or above**
 - **Docker Desktop**
 - **Gradle**
