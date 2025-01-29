@@ -1,4 +1,4 @@
-package com.iamzzy.simpleshop.entity;
+package com.iamzzy.simpleshop.constant;
 
 public enum Role {
     USER,
