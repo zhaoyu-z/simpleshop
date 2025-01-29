@@ -9,15 +9,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.jackson.Jacksonized;
 
+import java.sql.Timestamp;
+
 @Entity
+@Table(name = "login_histories")
 @Data
-@Table(name = "addresses")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
 @Jacksonized
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class Address {
+public class LoginHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,26 +29,14 @@ public class Address {
     private User user;
 
     @Column(nullable = false)
-    private String recipient;
+    private Timestamp loginTime;
 
     @Column(nullable = false)
-    private String addressLine1;
-
-    @Column
-    private String addressLine2;
+    private String ipAddress;
 
     @Column(nullable = false)
-    private String city;
+    private String userAgent;
 
     @Column(nullable = false)
-    private String country;
-
-    @Column(nullable = false)
-    private String postcode;
-
-    @Column(nullable = false)
-    private String recipientPhoneNumber;
-
-    @Column(nullable = false)
-    private String recipientEmail;
+    private String deviceName;
 }
