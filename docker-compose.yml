@@ -1,12 +1,16 @@
-version: '3.8'
 services:
-  mongo:
-    image: mongo
-    container_name: simpleshop
-    ports:
-      - "27017:27017"
+  postgres:
+    image: postgres
+    container_name: simpleshop_postgresql
+    restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: test
+      POSTGRES_USER: database_admin
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: simpleshop_database
+    ports:
+      - "55555:5432"
     volumes:
-      - D:\code\data\docker-mongoDB-simpleshop:/data/db
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
