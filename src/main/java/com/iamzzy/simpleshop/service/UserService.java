@@ -31,9 +31,6 @@ public class UserService {
     }
 
     private User _createUser(String displayName, String email, String rawPassword) {
-        if (userRepository.existsByEmail(email)) {
-            throw new IllegalArgumentException("User with email " + email + " already exists");
-        }
         return User.builder()
                 .displayName(displayName)
                 .email(email)
@@ -48,5 +45,9 @@ public class UserService {
 
     public void saveUser(User user) {
         userRepository.save(user);
+    }
+
+    public boolean userExists(String email) {
+        return userRepository.existsByEmail(email);
     }
 }
