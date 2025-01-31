@@ -28,7 +28,7 @@ public class UserController {
             @RequestParam @Email(message = "Please provide a valid email address") String email,
             @RequestParam @Password String rawPassword
     ) {
-        if (userService.userExists(email)) {
+        if (userService.userExistsByEmail(email)) {
             return ResponseBody.withMessage(HttpStatus.CONFLICT, "User with email " + email + " already exists");
         }
         User user = userService.createUser(displayName, email, rawPassword);
